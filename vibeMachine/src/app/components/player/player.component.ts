@@ -16,7 +16,8 @@ export class PlayerComponent implements OnInit{
   currentSong: Imusic | undefined;
 
   ngOnInit(): void {
-    this.playSong(musicList[0])
+    this.currentSong = musicList[0];
+    this.playSong(this.currentSong)
   }
  
   playSong(song:Imusic) {
